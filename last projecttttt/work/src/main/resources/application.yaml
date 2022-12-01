@@ -1,0 +1,22 @@
+spring:
+   datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/dw_study?useUnicode=true&charaterEncoding=utf-8&serverTimezone=UTC
+      username: root
+      password: qwer
+      initialization-mode: never
+      schema: classpath:init.sql
+      
+mybatis:
+ mapper-locations: classpath:/sqlmap/sqlmapper_*.xml
+ type-aliases-package: com.js.work.vo
+
+pagehelper:
+ ## helper-dialect : \uC0AC\uC6A9\uD558\uB294 \uB370\uC774\uD130 \uBCA0\uC774\uC2A4
+ helper-dialect: mysql
+ ## reasonable : true(0\uD398\uC774\uC9C0 1\uD398\uC774\uC9C0, 13\uD398\uC774\uC9C0\uAE4C\uC9C0 \uC788\uB294\uB370 14\uD398\uC774\uC9C0 \uC694\uCCAD\uC774 \uB4E4\uC5B4\uC624\uBA74 13\uD398\uC774\uC9C0\uB85C \uB9AC\uD134\uD574\uC90C)
+ reasonable: true
+ 
+google:
+   recaptcha:
+      secrect-key: 6LeNnYwiAAAAAPHIMXRRwO2qxF89ilPtm4lQqHht
